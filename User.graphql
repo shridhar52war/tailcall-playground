@@ -1,0 +1,10 @@
+type User {
+  id: Int!
+  name: String!
+  username: String!
+  email: String!
+
+  # Extend the user type with the posts field
+  # Use the current user's id to construct the path
+  posts: [Post] @http(path: "/users/{{value.id}}/posts")
+}

@@ -1,0 +1,24 @@
+type OrganisationInformation {
+  id: ID!
+  code: String!
+  name: OrganisationName!
+  email: OrganisationEmail!
+  logo: OrganisationLogo
+  domain: String!
+}
+
+type OrganisationName {
+  registered: String
+  display: String
+}
+
+type OrganisationEmail {
+  to: String!
+  from: String!
+}
+
+type OrganisationLogo {
+  login: String
+  invoice: String
+  header: String
+}
